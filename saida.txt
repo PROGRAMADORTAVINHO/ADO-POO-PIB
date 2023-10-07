@@ -1,0 +1,5 @@
+Pib da regiao Norte = 221.50000000000003%
+Pib da regiao Nordeste = 527.0%
+Pib da regiao Sudeste = 2197.0%
+Pib da regiao Sul = 671.0%
+Pib da regiao Centro-Oeste = 324.0%

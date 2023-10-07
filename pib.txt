@@ -1,0 +1,27 @@
+Sao Paulo;1349
+Rio de Janeiro;462
+Minas Gerais;386
+Rio Grande do Sul;263
+Parana;239
+Santa Catarina;169
+Distrito Federal;164
+Bahia;159
+Goias;111
+Pernambuco;104
+Espirito Santo;97
+Para;88
+Ceara;87
+Mato Grosso;71
+Amazonas;64
+Maranhao;52
+Mato Grosso do Sul;49
+Rio Grande do Norte;36
+Parai­ba;35
+Alagoas;28
+Rondonia;27
+Sergipe;26
+Piaui­;24
+Tocantins;18
+Amapa;8.9
+Acre;8.7
+Roraima;6.9
