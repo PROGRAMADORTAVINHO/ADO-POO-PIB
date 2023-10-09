@@ -2,34 +2,25 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Class Description . . .
- *
- * @author: Autor
- * @version: 1.0
- *           Main Class File: topAXX.java
- *           File: Structure.java
- *           Date: DD/MM/YYYY
- */
 
 public class Main {
     public static void main(String[] args) {
 
         // nome do arquivo
-        String nomeDoArquivo1 = "pib.txt";
-        String nomeDoArquivo2 = "regioes.txt";
+        String ArquivoPib = "pib.txt";
+        String ArquivoRegioes = "regioes.txt";
 
         // linha temporaria
         String linha = null;
 
-        /* ------------------------------------- */
-        /* Abertura de arquivo e loop de leitura */
-        /* ------------------------------------- */
+        /* --------------------------------------- */
+        /* Abertura dos arquivos e loop de leitura */
+        /* --------------------------------------- */
         List<Estado> estados = new ArrayList<>();
         List<Regiao> regioes = new ArrayList<>();   
         
         try {
-            FileReader fileReader = new FileReader(nomeDoArquivo1);
+            FileReader fileReader = new FileReader(ArquivoPib);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             // loop por cada linha do arquivo
@@ -45,20 +36,20 @@ public class Main {
             }
             for(Estado estado : estados){
                 Double percentual = (estado.getPib()/pibTotal)*100;
-                System.out.println(estado.getNome()+","+ percentual+"%");
+                System.out.println(estado.getNome() + " = " + percentual + "%");
             }
             // feche o arquivo
             bufferedReader.close();
         } catch (FileNotFoundException ex) {
-            System.out.println("Arquivo inexistente: '" + nomeDoArquivo1 + "'");
+            System.out.println("Arquivo inexistente: '" + ArquivoPib + "'");
         } catch (IOException ex) {
-            System.out.println("Erro lendo o arquivo '" + nomeDoArquivo1 + "'");
+            System.out.println("Erro lendo o arquivo '" + ArquivoPib + "'");
         }
 
         Regiao regiao = null;
 
         try {
-            FileReader fileReader = new FileReader(nomeDoArquivo2);
+            FileReader fileReader = new FileReader(ArquivoRegioes);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             // loop por cada linha do arquivo
             while ((linha = bufferedReader.readLine()) != null) {
@@ -81,12 +72,12 @@ public class Main {
             // feche o arquivo
             bufferedReader.close();
         } catch (FileNotFoundException ex) {
-            System.out.println("Arquivo inexistente: '" + nomeDoArquivo2 + "'");
+            System.out.println("Arquivo inexistente: '" + ArquivoRegioes + "'");
        } catch (IOException ex) {
-            System.out.println("Erro lendo o arquivo '" + nomeDoArquivo2 + "'");
+            System.out.println("Erro lendo o arquivo '" + ArquivoRegioes + "'");
         }
         /* ------------------------------------- */
-        /* Exemplo de escrita em arquivo */
+        /*        Escrita em arquivo txt         */
         /* ------------------------------------- */
         String arquivoDeSaida = "saida.txt";
 
@@ -94,8 +85,8 @@ public class Main {
             FileWriter fileWriter = new FileWriter(arquivoDeSaida);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            for (Regiao regiao2 : regioes) {
-                bufferedWriter.write("Pib da regiao " + regiao2.getNome() + " = " + regiao2.calcularPib()+"%");
+            for (Regiao regiaoSaida : regioes) {
+                bufferedWriter.write("Pib da regiao " + regiaoSaida.getNome() + " = " + regiaoSaida.calcularPib()+"%");
                 bufferedWriter.newLine();
             }
             // feche o arquivo

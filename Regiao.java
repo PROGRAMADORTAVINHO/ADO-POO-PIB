@@ -6,12 +6,10 @@ public class Regiao {
     private final String nome;
     private ArrayList<Estado> estados;
 
-
     public Regiao(String nome) {
         this.nome = nome;
         this.estados = new ArrayList<>();
     }
-
 
     public String getNome() {
         return nome;
@@ -20,7 +18,6 @@ public class Regiao {
     public ArrayList<Estado> getEstados() {
         return estados;
     }
-    
 
     public void adicionarEstado(Estado estado) {
         estados.add(estado);
